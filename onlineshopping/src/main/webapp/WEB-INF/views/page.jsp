@@ -21,12 +21,13 @@
 <title>Online Shopping - ${title}</title>
 <script>
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap theme from bootwatch -->
-<link href="${css}/bootstrap-superhero-theme.css" rel="stylesheet">
+<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
 <!-- Custom styles for this template -->
@@ -54,6 +55,12 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Contact Content -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts==true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 		</div>
 		
 		<!-- Footer -->

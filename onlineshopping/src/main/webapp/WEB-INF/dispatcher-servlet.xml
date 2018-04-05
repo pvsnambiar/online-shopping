@@ -13,6 +13,7 @@
    ">
    
    <context:component-scan base-package="net.pvsm.onlineshopping.controller"/>
+   <context:component-scan base-package="net.pvsm.shoppingbackend.daoImpl"/>
    
    
    <bean id="viewResolver"
